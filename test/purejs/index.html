@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="shortcut icon" type="image/png" href="/node_modules/jasmine-core/lib/jasmine-core/jasmine_favicon.png">
+    <link rel="stylesheet" type="text/css" href="/node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
+    <script type="text/javascript" src="/node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+    <script type="text/javascript" src="/node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+    <script type="text/javascript" src="/node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
+  </head>
+  <body>
+    <section>
+      <h1>Samples</h1>
+      <article id=greeters>
+        <h2>Greeter</h2>
+        <div bee-type=greeter bee-opts-greeter='{"greeting": "hello world 1"}'></div>
+        <div bee-type=greeter bee-opts-greeter='{"greeting": "hello world 2"}'></div>
+      </article>
+      <div bee-type=greeter bee-opts-greeter='{"greeting": "hello world 3"}'></div>
+    </section>
+    <div bee-type=greeter bee-opts-greeter='{"greeting": "hello world 4"}'></div>
+    <script type=text/javascript src=/src/bee.js></script>
+    <script type=text/javascript src=bee.spec.js></script>
+  </body>
+</html>
