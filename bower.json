@@ -1,0 +1,26 @@
+{
+  "name": "bee-js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/paulschwarz/bee",
+  "authors": [
+    "Paul Schwarz <paulsschwarz@gmail.com>"
+  ],
+  "description": "Bee is for behavior binding",
+  "main": "src/bee.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "html",
+    "initializer",
+    "onready"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
