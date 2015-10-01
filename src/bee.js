@@ -1,8 +1,8 @@
 bee = (function(){
     var filters = {},
-        typeSelector = 'bee-type',
-        optionsSelector = 'bee-opts-',
-        _function = 'function',
+        typeSelector = 'data-bee',
+        optionsSelector = 'data-bee-opts-',
+        func = 'function',
         raise = function(message){
             throw 'bee: ' + message;
         },
@@ -21,8 +21,8 @@ bee = (function(){
             if (getResult(element, type)){
                 raise('already applied "' + type + '"');
             } else if (typeof filters[t.name] !== 'object') {
-                raise('no filter registered for "' + t.name + '"');
-            } else if (typeof filters[t.name][t.action] !== _function) {
+                raise('no filter for "' + t.name + '"');
+            } else if (typeof filters[t.name][t.action] !== func) {
                 raise('no "' + t.action + '" for "' + t.name + '"');
             } else {
                 element.bees = element.bees || {};
@@ -33,11 +33,11 @@ bee = (function(){
             var result = getResult(element, type),
                 destructor = 'destroy';
             if (result){
-                if (typeof result[destructor] === _function){
+                if (typeof result[destructor] === func){
                     result[destructor]();
                 } else {
                     var t = splitType(type, destructor);
-                    if (typeof result[t.action] === _function){
+                    if (typeof result[t.action] === func){
                         result[t.action](destructor);
                     }
                 }
