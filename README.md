@@ -46,17 +46,17 @@ window.addEvent('domready', function(){
 ### Now use it
 ```HTML
 <!-- A basic example without options -->
-<div bee-type=jqueryui-datepicker></div>
+<div data-bee=jqueryui-datepicker></div>
 
 <!-- An example with options -->
-<div bee-type=jqueryui-datepicker bee-opts-jqueryui-datepicker='{
+<div data-bee=jqueryui-datepicker data-bee-opts-jqueryui-datepicker='{
         "showAnim": "slideDown"
     }'>
 </div>
 
 <!-- A non jQuery UI example -->
 <!-- Note that the "greeter" is something you'd implement -->
-<span bee-type=greeter bee-opts-greeter='{
+<span data-bee=greeter data-bee-opts-greeter='{
     "format": "Hello, {{firstname}} {{lastname}}",
     "firstname": "Paul",
     "lastname": "Schwarz"

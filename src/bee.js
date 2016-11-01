@@ -1,7 +1,7 @@
 bee = (function(){
     var filters = {},
         typeSelector = 'data-bee',
-        optionsSelector = 'data-bee-opts-',
+        optionsSelector = optionsSelector + '-opts-',
         func = 'function',
         raise = function(message){
             throw 'bee: ' + message;
@@ -60,16 +60,43 @@ bee = (function(){
                 });
             });
         };
+
     return {
+
+        /**
+         * Register a constructor with bee.
+         *
+         * @param name
+         * @param callback
+         */
         filter: function(name, callback){
             filters[name] = callback;
         },
+
+        /**
+         * Scan the given wrapper and trigger constructors.
+         *
+         * @param wrapper
+         */
         init: function(wrapper){
             scan(wrapper, create);
         },
+
+        /**
+         * Scan the given wrapper and trigger destructors.
+         *
+         * @param wrapper
+         */
         deinit: function(wrapper){
             scan(wrapper, destroy);
         },
+
+        /**
+         * Get the bound instance of the given bee type on the given element.
+         *
+         * @param element
+         * @param type
+         */
         get: getResult
     }
 })();
