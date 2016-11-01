@@ -6,8 +6,8 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= pkg.version %> */\n'
       },
       build: {
-        src: 'src/<%= pkg.name %>.js',
-        dest: 'build/<%= pkg.name %>.min.js'
+        src: 'src/bee.js',
+        dest: 'build/bee.min.js'
       }
     },
     karma: {

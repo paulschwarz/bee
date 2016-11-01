@@ -1,7 +1,7 @@
 bee = (function(){
     var filters = {},
         typeSelector = 'data-bee',
-        optionsSelector = optionsSelector + '-opts-',
+        optionsSelector = typeSelector + '-opts-',
         func = 'function',
         raise = function(message){
             throw 'bee: ' + message;
