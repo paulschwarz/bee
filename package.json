@@ -1,6 +1,6 @@
 {
-  "name": "bee",
-  "version": "1.0.0",
+  "name": "bee-js",
+  "version": "1.0.1",
   "description": "Bee is for behavior binding.",
   "main": "src/bee.js",
   "repository": {
@@ -33,5 +33,22 @@
     "karma-jasmine": "^0.2.2",
     "karma-phantomjs-launcher": "^0.2.1",
     "phantomjs": "^1.9.18"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-karma": "^0.12.1",
+    "jasmine-core": "^2.3.4",
+    "karma-jasmine": "^0.2.3",
+    "karma": "^0.13.10",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "grunt-contrib-jshint": "^0.11.3",
+    "phantomjs": "^1.9.18"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
